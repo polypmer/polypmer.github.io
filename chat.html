@@ -5,12 +5,10 @@
   <!-- Basic Page Needs
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <meta charset="utf-8">
-  <title>fen</title>
+  <title>chat</title>
   <meta name="description" content="">
-  <meta name="author" content="Fen" >
-  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-  <script type="text/javascript">
-  </script>
+  <meta name="author" content="">
+
   <!-- Mobile Specific Metas
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -19,77 +17,56 @@
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
 
+  <!-- Javascript
+  -------------------------------------------------- -->
+  <script type="text/javascript" src="http://cdn.icecomm.io/icecomm.js">
+  var comm = new Icecomm('ssNlFy9885RWTXPy8OwIdvunMGhVSCqgYWMQ9grKp/bn9gNe');
+
+comm.connect('custom room', {audio: false});
+
+comm.on('connected', function(options) {
+   document.body.appendChild(options.video);
+});
+
+comm.on('local', function(options) {
+  localVideo.src = options.stream;
+});
+
+comm.on('disconnect', function(options) {
+  document.getElementById(options.callerID).remove();
+});
+  </script>
+
+
+
   <!-- CSS
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/skeleton.css">
-  <style type="text/css">
-html,
-body {
-margin:0;
-padding:0;
-height:101%;
-overflow:hidden;}
-
-	.special {
-	line-height:70%;
-	font-size:40px;
-	padding: 0;
+  <style>
+  video {
+    height: 200px;
+    width: 200px;
   }
-	/* unvisited link */
-	a:link {
-	    color: #FF0000;
-	    text-decoration: none;
-	}
-
-	/* visited link */
-	a:visited {
-	    color: #00FF00;
-	    text-decoration: none;
-	}
-
-	/* mouse over link */
-	a:hover {
-	    color: #FF00FF;
-	    text-decoration: underline;
-	}
-
-	/* selected link */
-	a:active {
-	color: #0000FF;
-	}
-	#icon {
-		width: 116px;  height: 63px;}
-	#contact {
-	text-align: right;
-	}
-	#btnGit:hover{
-	}
   </style>
 
   <!-- Favicon
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <link rel="icon" type="image/png" href="images/favicon.png">
+
 </head>
 <body>
+
   <!-- Primary Page Layout
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <div class="container">
     <div class="row">
-      <div id="contact" class="one-half column" style="margin-top:25%">
-			<p>fenimore.love(at)workingagenda.com</p>
-			<a id="btnDev" href="http://devinettes.polypmer.org"><img style="width:80px;height:auto" src="images/noun_20634.png" alt="Riddles!"></a>
-			<a id="btnCh" href="http://treasure.plyp.org"><img style="width:80px;height:auto" src="images/map.png" alt="Free Stuff!"></a>
-			<a id="btnCh" href="http://play.plyp.org"><img style="width:80px;height:auto" src="images/chess.png" alt="Chess!"></a>
-			<a id="btnCh" href="http://portal.plyp.org"><img style="width:80px;height:auto" src="images/noun_14774.png" alt="Portal!"></a>
-			<hr>
-			For these projects, I use icons from <a href="https://thenounproject.com/">the noun project</a>.
-			<br>
-			I have another <a href="http://polypmer.org">homepage</a> elsewhere.
-      </div>
+      <div class="one-half column" style="margin-top: 25%">
+        <h4>unmute:</h4>
+        <video id="localVideo" autoplay></video>
+        <script type="text/javascript" src="http://cdn.icecomm.io/icecomm.js"></script></div>
     </div>
   </div>
-
 
 <!-- End Document
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
