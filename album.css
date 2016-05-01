@@ -1,6 +1,11 @@
 .label-purple,
 .badge-purple { background-color: #9585bf!important }
 
+.lead {
+}
+
+
+
 body {
   padding-top: 20px;
   padding-bottom: 20px;
@@ -17,6 +22,9 @@ body {
 
 .navbar {
   margin-bottom: 0;
+  background-color: #e8f5e9;
+  font-family: monospace;
+
 }
 
 .navbar-collapse .container-fluid {
@@ -47,10 +55,10 @@ body {
 }
 
 .jumbotron {
-  padding-top: 6rem;
-  padding-bottom: 6rem;
+  padding-bottom: 11rem;
   margin-bottom: 0;
-  background-color: #fff;
+  background: url(img/intro-bg.jpg) no-repeat center center;
+  background-size:cover;
 }
 
 .jumbotron p:last-child {
@@ -63,13 +71,23 @@ body {
 
 .jumbotron .container {
   max-width: 40rem;
+  margin-right:-40px;
 }
 
 .album {
   min-height: 50rem; /* Can be removed; just added for demo purposes */
   padding-top: 3rem;
   padding-bottom: 3rem;
-  background-color: #f7f7f7;
+  background-color: #e8f5e9;
+}
+.album h1{
+  color: #004d40;
+}
+.album .card-header {
+  background-color: #e8f5e9;
+  color: #004d40;
+
+
 }
 
 .card {
@@ -96,4 +114,3 @@ footer {
 footer p {
   margin-bottom: .25rem;
 }
-
