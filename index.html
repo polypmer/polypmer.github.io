@@ -53,10 +53,12 @@
 	      <div class="col-sm-6">
 		  <ul class="list-group">
 		      <li class="list-group-item disabled" >On this page:</li>
-		      <li class="list-group-item"><a href="#android">Android</a> |
+		      <li class="list-group-item">
+			  <a href="#android">Android</a> |
 			  <a href="#web">Web</a> |
-			  <a href="#other">Other</a> |
-			  <a href="#skills">Skills</a>
+			  <a href="#desktop">Desktop</a> |
+			  <a href="#libs">Libraries</a> | 
+			  <a href="#skills">Skills</a> 
 		      </li>
 		  </ul>
 	      </div>
@@ -274,29 +276,11 @@
 	  <thead>
 	      <tr>
 		  <th colspan="2">
-		      Miscellaneous Projects<a id="other"></a>
+		      Desktop Applications<a id="desktop"></a>
 		  </th>
 	      </tr>
 	  </thead>	      
-	  <tobody>	      
-	      <tr>
-		  <th>Go Chess | Ghess</th>
-		  <td>
-		      <img src="img/ghess.png" style="width:100px;" class="img-thumbnail card-img-top"  alt="Card image cap">
-		  </td>
-		  <td>
-		      <p>A Go chess engine with a commandline-interface,
-			  for watching random games, and a browser interface for realtime play powered by websockets.</p>
-		      <a href="https://github.com/polypmer/go-chess" class="btn btn-default btn-lg">
-			  <i class="fa fa-github fa-fw"></i> <span class="network-name">Source Code</span></a> 
-		  </td>
-		  <td>
-		      <span class="label label-pill label-primary">Go</span>
-		      <span class="label label-pill label-warning">websockets</span>
-		      <br>
-		      <span class="label label-pill label-info">GPLv3</span>
-		  </td>
-	      </tr>
+	  <tobody>
 	      <tr>
 		  <th>Scribouillage</th>
 		  <td>
@@ -327,10 +311,68 @@
 		  </td>
 		  <td>
 		      <span class="label label-pill label-primary">Go</span>
-		      <span class="label label-pill label-primary">Javascript</span>		      
+		      <span class="label label-pill label-primary">Javascript</span>
 		      <span class="label label-pill label-success">templates</span>
-		      <span class="label label-pill label-info">HTML5</span>
-		      <span class="label label-pill label-info">Bootstrap 4</span>
+		      <span class="label label-pill label-warning">HTML5</span>
+		      <span class="label label-pill label-warning">Bootstrap 4</span>
+		      <br>
+		      <span class="label label-pill label-info">MIT</span>
+		  </td>
+	      </tr>
+	  </tbody>
+	  <thead>
+	      <tr>
+		  <th colspan="2">
+		      Libraries<a id="libs"></a>
+		  </th>
+	      </tr>
+	  </thead>	      
+	  <tobody>
+	      <tr>
+		  <th>Go Chess | Ghess</th>
+		  <td>
+		      <img src="img/ghess.png" style="width:100px;" class="img-thumbnail card-img-top"  alt="Card image cap">
+		  </td>
+		  <td>
+		      <p>A Go chess engine with a commandline-interface,
+			  for watching random games, and a browser interface for realtime play powered by websockets.</p>
+		      <a href="https://github.com/polypmer/go-chess" class="btn btn-default btn-lg">
+			  <i class="fa fa-github fa-fw"></i> <span class="network-name">Source Code</span></a> 
+		  </td>
+		  <td>
+		      <span class="label label-pill label-primary">Go</span>
+		      <span class="label label-pill label-warning">websockets</span>
+		      <br>
+		      <span class="label label-pill label-info">GPLv3</span>
+		  </td>
+	      </tr>	      
+	      <tr>
+		  <th>
+		      freestuffs
+		  </th>
+		  <td>
+		      <img src="img/treasure.png" style="width:100px;" class="img-thumbnail card-img-top"  alt="Card image cap">
+		  </td>
+		  <td>
+		      <p>This is a Python 3.x package which scrapes free stuff from Craigslist.</p>
+		      <p>As an example, there's a twitter bot (adopted from a Pump.io bot of similar functioning) which
+			  posts free items from Craiglist New York onto Twitter. This bot isn't churning tweets,
+			  but one may <a href="https://twitter.com/FreeeBot">follow</a> it all the same. <a href="https://pypi.python.org/pypi/freestuffs/0.1">freestuffs</a>.
+		      </p>
+		      <a href="https://pypi.python.org/pypi/freestuffs/0.1" class="btn btn-default btn-lg">
+			  <i class="fa fa-download fa-fw"></i> <span class="network-name">Pip</span></a>
+		      <a href="https://twitter.com/FreeeBot" class="btn btn-default btn-lg">
+			  <i class="fa fa-twitter fa-fw"></i> <span class="network-name">Follow</span></a>
+		      <a href="https://github.com/polypmer/freeebot" class="btn btn-default btn-lg">
+			  <i class="fa fa-github fa-fw"></i> <span class="network-name">Source Code</span></a>
+		      <a href="http://freestuffs.readthedocs.io/en/latest/" class="btn btn-default btn-lg">
+			  <i class="fa fa-book fa-fw"></i> <span class="network-name">Read the Docs</span></a>		      
+		  </td>
+		  <td>
+		      <br>
+		      <span class="label label-pill label-primary">Python 3</span>
+		      <span class="label label-pill label-warning">Read the docs</span>		      
+		      <span class="label label-pill label-warning">Twitter API</span>
 		      <br>
 		      <span class="label label-pill label-info">MIT</span>
 		  </td>
@@ -358,35 +400,7 @@
 		      <span class="label label-pill label-info">Public Domain</span>
 		  </td>
 	      </tr>
-	      <tr>
-		  <th>
-		      FreeeBot
-		  </th>
-		  <td>
-		      <img src="img/treasure.png" style="width:100px;" class="img-thumbnail card-img-top"  alt="Card image cap">
-		  </td>
-		  <td>
-		      <p >This twitter bot (adopted from a Pump.io bot of similar functioning)
-			  posts free items from Craiglist New York onto Twitter. This bot isn't churning tweets,
-			  but one may <a href="https://twitter.com/FreeeBot">follow</a> it all the same. This bot
-			  uses my Python package, <a href="https://pypi.python.org/pypi/freestuffs/0.1">freestuffs</a>.
-		      </p>
-		      <a href="https://twitter.com/FreeeBot" class="btn btn-default btn-lg">
-			  <i class="fa fa-twitter fa-fw"></i> <span class="network-name">Follow</span></a>
-		      <a href="https://github.com/polypmer/freeebot" class="btn btn-default btn-lg">
-			  <i class="fa fa-github fa-fw"></i> <span class="network-name">Source Code</span></a>
-		      <a href="http://freestuffs.readthedocs.io/en/latest/" class="btn btn-default btn-lg">
-			  <i class="fa fa-book fa-fw"></i> <span class="network-name">Read the Docs</span></a>		      
-		  </td>
-		  <td>
-		      <br>
-		      <span class="label label-pill label-primary">Python 3</span>
-		      <span class="label label-pill label-warning">Twitter API</span>
-		      <span class="label label-pill label-warning">Read the docs</span>		      
-		      <br>
-		      <span class="label label-pill label-info">MIT</span>
-		  </td>
-	      </tr>
+
 	  </tbody>
       </table>
       <hr>
