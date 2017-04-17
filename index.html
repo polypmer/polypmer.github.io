@@ -94,7 +94,9 @@
           <a target="_blank" href="https://democracynow.org">Democracy Now!</a>
           application for streaming and downloading their podcasts, with thousands of active users around the world.<br>
                       <a href="https://play.google.com/store/apps/details?id=com.workingagenda.democracydroid"
-       class="btn btn-default btn-lg"><i class="fa fa-play fa-fw"></i> <span class="network-name">Play Store</span></a>
+                         class="btn btn-default btn-lg"><i class="fa fa-play fa-fw"></i> <span class="network-name">Play Store</span></a>
+                      <a href="https://f-droid.org/repository/browse/?fdfilter=devinettes&fdid=com.workingagenda.democracydroid"
+                         class="btn btn-default btn-lg"><i class="fa fa-download fa-fw"></i> <span class="network-name">F-Droid</span></a>
                       <a href="https://github.com/fenimore/DemocracyDroid" class="btn btn-default btn-lg">
         <i class="fa fa-github fa-fw"></i> <span class="network-name">Source Code</span></a>
                 </p>
@@ -111,7 +113,7 @@
       <td>
           <img src="img/fissure.png" style="width:76px;"  class="img-thumbnail card-img-top" alt="dd">
       </td>
-      <td><p>An Android Utility for creating and viewing GIF files.<br>
+      <td><p>An Android Utility for creating and viewing GIF files. Translated in Japanese and French.<br>
           <a href="https://play.google.com/store/apps/details?id=com.workingagenda.fissure"
        class="btn btn-default btn-lg"><i class="fa fa-play fa-fw"></i> <span class="network-name">Play Store</span></a>
           <a href="https://f-droid.org/repository/browse/?fdfilter=devinettes&fdid=com.workingagenda.fissure"
@@ -194,8 +196,6 @@
           <p >This application compares craigslist free stuff postings by location.
         The distance of a free thing is directly related to its value. There are many treasures to be found,
         hopefully, you will find something near you worth giving a new home. </p>
-          <a href="http://treasure.plyp.org" class="btn btn-default btn-lg">
-        <i class="fa fa-globe fa-fw"></i> <span class="network-name">Browser</span></a>
           <a href="https://github.com/fenimore/treasure-map" class="btn btn-default btn-lg">
         <i class="fa fa-github fa-fw"></i> <span class="network-name">Source Code</span></a>
       </td>
@@ -218,8 +218,6 @@
       <td>
           <p >Chesscargot is a chess server designed to play slow games.
         Challenge me to a match.<br>
-        <a href="http://play.plyp.org" class="btn btn-default btn-lg">
-            <i class="fa fa-globe fa-fw"></i> <span class="network-name">Browser</span></a>
         <a href="https://github.com/fenimore/chesscargot" class="btn btn-default btn-lg">
             <i class="fa fa-github fa-fw"></i> <span class="network-name">Source Code</span></a>
           </p>
@@ -241,8 +239,6 @@
       <td>
           <p >A simple flat file photo gallery.
         This was built with a minimal functionality and design in mind.</p>
-          <a href="http://wink.plyp.org" class="btn btn-default btn-lg">
-        <i class="fa fa-picture-o fa-fw"></i> <span class="network-name">My Albums</span></a>
           <a href="https://github.com/fenimore/wink" class="btn btn-default btn-lg">
         <i class="fa fa-github fa-fw"></i> <span class="network-name">Source Code</span></a>
       </td>
@@ -361,8 +357,7 @@
       <td>
           <p>This is a Python 3.x package which scrapes free stuff from Craigslist.</p>
           <p>As an example, there's a twitter bot (adopted from a Pump.io bot of similar functioning) which
-        posts free items from Craiglist New York onto Twitter. This bot isn't churning tweets,
-        but one may <a href="https://twitter.com/FreeeBot">follow</a> it all the same.
+        posts free items from Craiglist New York onto Twitter. <a href="https://twitter.com/FreeeBot">Follow</a> @freeestuff.
           </p>
           <a href="https://pypi.python.org/pypi/freestuffs/0.1" class="btn btn-default btn-lg">
         <i class="fa fa-download fa-fw"></i> <span class="network-name">Pip</span></a>
@@ -425,8 +420,6 @@
           over it.</p>
           <a href="https://github.com/fenimore/fenestrate" class="btn btn-default btn-lg">
         <i class="fa fa-github fa-fw"></i> <span class="network-name">Source Code</span></a>
-          <a href="https://addons.mozilla.org/en-US/firefox/addon/fenestrate/" class="btn btn-default btn-lg">
-        <i class="fa fa-firefox fa-fw"></i> <span class="network-name">Firefox</span></a>
         <a href="https://chrome.google.com/webstore/detail/fenestrate/bpaccmfpmigikfeedodhkegmjahmpmok" class="btn btn-default btn-lg">
         <i class="fa fa-chrome fa-fw"></i> <span class="network-name">Chrome</span></a>
       </td>
@@ -439,13 +432,34 @@
       </td>
         </tr>
         <tr>
+
+            <tr>
+                <th>Intercept</th>
+                <td>
+                    <img src="img/intercept.png" style="width:100px;" class="img-thumbnail card-img-top"  alt="Card image cap">
+                </td>
+                <td>
+                    <p>A Firefox & Chrome WebExtension for intercepting http requests from your browser; sort by MIME type.</p>
+                    <a href="https://github.com/fenimore/intercept" class="btn btn-default btn-lg">
+                        <i class="fa fa-github fa-fw"></i> <span class="network-name">Source Code</span></a>
+                </td>
+                <td>
+                    <span class="label label-pill label-primary">Javascript</span>
+                    <span class="label label-pill label-success">WebExtensions</span>
+                    <span class="label label-pill label-warning">Chrome API</span>
+                    <br>
+                    <span class="label label-pill label-info">GPLv3</span>
+                </td>
+            </tr>
+
+
             <th>Conway's Game of Life</th>
             <td>
                 <img src="img/conway.gif" style="width:100px;" class="img-thumbnail card-img-top"  alt="Card image cap">
             </td>
             <td>
                 <p>An implementation of Conway's Game of Life, a Cellular Automaton.</p>
-                <a href="https://github.com/fenimore/conway-scheme" class="btn btn-default btn-lg">
+                <a href="https://github.com/fenimore/conways-scheme" class="btn btn-default btn-lg">
                     <i class="fa fa-github fa-fw"></i> <span class="network-name">Source Code</span></a>
             </td>
             <td>
@@ -476,7 +490,7 @@
           Frameworks
       </th>
       <td>
-          <i>Django, Flask, Bootstrap, libgdx, Arduino</i>
+          <i>Django, Flask, Bootstrap, libgdx, Arduino, Linux</i>
       </td>
         </tr>
         <tr>
@@ -484,7 +498,7 @@
           API
       </th>
       <td>
-          <i>Twitter, OpenStreetMap, GovTrack, Github, Youtube</i>
+          <i>Twitter, OpenStreetMap, GovTrack, Github, Youtube, Chrome</i>
       </td>
         </tr>
         <tr>
@@ -500,7 +514,7 @@
           Tools
       </th>
       <td>
-          <i>Git, Command line, Web scraping, Websockets, Encryption, RSS, Readthedocs</i>
+          <i>Git, Command line, Web scraping, Websockets, Encryption, RSS, Readthedocs, Nginx</i>
       </td>
         </tr>
         <tr>
@@ -508,7 +522,7 @@
           IDE
       </th>
       <td>
-          <i>Emacs, Android Studio</i>
+          <i>Emacs, Android Studio, PyCharm</i>
       </td>
         </tr>
         <tr>
