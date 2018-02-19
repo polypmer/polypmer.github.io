@@ -1,0 +1,402 @@
+[
+    {
+        "name": "Democracy Droid!",
+        "shortname": "DemocracyDroid",
+        "type": "android",
+        "description": "An unofficial <a target='_blank' href='https://democracynow.org'>Democracy Now!</a> application for streaming and downloading their podcasts, with thousands of active users around the world.",
+        "links": [
+            {
+                "link": "https://github.com/fenimore/DemocracyDroid",
+                "type": "source",
+                "text": "Source Code",
+                "icon": "fa fa-github fa-fw"
+            },
+            {
+                "link": "https://play.google.com/store/apps/details?id=com.workingagenda.democracydroid",
+                "type": "store",
+                "text": "Play Store",
+                "icon": "fa fa-play fa-fw"
+            },
+            {
+
+                "link": "https://f-droid.org/repository/browse/?fdfilter=devinettes&fdid=com.workingagenda.democracydroid",
+                "type": "store",
+                "text": "F-Droid",
+                "icon": "fa fa-download fa-fw"
+            }
+        ],
+        "tools": {
+            "language": ["Java"],
+            "database": null,
+            "framework": "Android",
+            "technologies": [
+                "XML",
+                "HLS-streaming"
+            ]
+        },
+        "licenses": ["GPLv3", "CC BY-NC-ND 3.0 US"],
+        "image": "img/ddicon.png",
+        "stars": 0
+    },
+    {
+        "name": "Alio",
+        "shortname": "alio",
+        "type": "desktop",
+        "description": "Commandline Music Player",
+        "links": [
+            {
+                "link": "https://github.com/fenimore/alio",
+                "type": "source",
+                "text": "Source Code",
+                "icon": "fa fa-github fa-fw"
+            }
+        ],
+        "tools": {
+            "language": ["Go"],
+            "database": null,
+            "framework": null,
+            "technologies": [
+                "libvlc",
+                "tui-go"
+            ]
+        },
+        "licenses": ["GPLv3"],
+        "image": "img/alio.png",
+        "stars": 0
+    },
+    {
+        "name": "Ghess",
+        "shortname": "ghess",
+        "type": "library",
+        "description": "A Go chess engine. Ghess represents the board, parses moves, and includes a Minimax implementation with alpha beta pruning for an AI.",
+        "links": [
+            {
+                "link": "https://github.com/fenimore/go-chess",
+                "type": "source",
+                "text": "Source Code",
+                "icon": "fa fa-github fa-fw"
+            },
+            {
+                "link": "https://godoc.org/github.com/fenimore/go-chess",
+                "type": "docs",
+                "text": "GoDoc",
+                "icon": "fa fa-book fa-fw"
+            },
+            {
+                "link": "https://ghess-chess.herokuapp.com/",
+                "type": "action",
+                "text": "Challenge AI",
+                "icon": "fa fa-crosshairs fa-fw"
+            }
+        ],
+        "tools": {
+            "language": ["Go"],
+            "database": null,
+            "framework": null,
+            "technologies": [
+                "WebSockets",
+                "MiniMax"
+            ]
+        },
+        "licenses": ["GPLv3"],
+        "image": "img/ghess.png",
+        "stars": 0
+    },
+    {
+        "name": "Devinettes",
+        "shortname": "devinettes-android",
+        "type": "android",
+        "description": "This application is a collection riddles in verse; As our team solves and composes new riddles, more will be added. The difficulty will largely depend on the user's subtle aptitude for 'these kinds of things.' Beware, there are no hints, nor keys under the mat.",
+        "links": [
+            {
+                "link": "https://github.com/fenimore/devinettes-android",
+                "type": "source",
+                "text": "Source Code",
+                "icon": "fa fa-github fa-fw"
+            },
+            {
+
+                "link": "https://f-droid.org/packages/com.workingagenda.devinettes/",
+                "type": "store",
+                "text": "F-Droid",
+                "icon": "fa fa-download fa-fw"
+            }
+        ],
+        "tools": {
+            "language": ["Java"],
+            "database": null,
+            "framework": "Android",
+            "technologies": []
+        },
+        "licenses": ["GPLv3", "CC BY-NC-ND 3.0 US"],
+        "image": "img/devinettes_icon.png",
+        "stars": 0
+    },
+    {
+        "name": "The Treasure Map",
+        "shortname": "freestuffs",
+        "type": "web",
+        "description": "The Treasure Map compares craigslist free stuff postings by location. <br/>The distance of a free thing is directly related to its value. There are many treasures to be found, hopefully, you will find something near you worth giving a new home.<br/><br><i>The demos have been deactivated</i>",
+        "links": [
+            {
+                "link": "https://github.com/fenimore/treasure-map",
+                "type": "source",
+                "text": "Treasure Map Source",
+                "icon": "fa fa-github fa-fw"
+            },
+            {
+                "link": "https://github.com/fenimore/freestuffs",
+                "type": "source",
+                "text": "Freeestuffs Source",
+                "icon": "fa fa-github fa-fw"
+            },
+            {
+                "link": "https://twitter.com/FreeeBot",
+                "type": "twitter",
+                "text": "Twitterbot",
+                "icon": "fa fa-twitter fa-fw"
+            },
+            {
+                "link": "http://freestuffs.readthedocs.io/en/latest/",
+                "type": "docs",
+                "text": "Read the Docs",
+                "icon": "fa fa-book fa-fw"
+            }
+        ],
+        "tools": {
+            "language": ["Python"],
+            "database": null,
+            "framework": "Flask",
+            "technologies": ["Open Street Map", "Beautiful Soup 4", "Twitter API"]
+        },
+        "licenses": ["MIT"],
+        "image": "img/treasuremap.png",
+        "stars": 0
+    },
+    {
+        "name": "Chesscargot",
+        "shortname": "chesscargot",
+        "type": "web",
+        "description": "Chesscargot is an <i>open access</i> chess server designed to play slow games.<br><br/><i>Demo has been deactivated due to spam 😖</i>",
+        "links": [
+            {
+                "link": "https://github.com/fenimore/chesscargot",
+                "type": "source",
+                "text": "Source Code",
+                "icon": "fa fa-github fa-fw"
+            }
+        ],
+        "tools": {
+            "language": ["PHP"],
+            "database": "MySQL",
+            "framework": null,
+            "technologies": ["Open Street Map"]
+        },
+        "licenses": ["GPLv3"],
+        "image": "img/chesscargot.png",
+        "stars": 0
+    },
+    {
+        "name": "Wink",
+        "shortname": "wink",
+        "type": "web",
+        "description": "A simple flat file photo gallery. <br><br> this was build with minimal functionality and design in mind :)",
+        "links": [
+            {
+                "link": "https://github.com/fenimore/wink",
+                "type": "source",
+                "text": "Source Code",
+                "icon": "fa fa-github fa-fw"
+            }
+        ],
+        "tools": {
+            "language": ["PHP"],
+            "database": null,
+            "framework": null,
+            "technologies": []
+        },
+        "licenses": ["GPLv3"],
+        "image": "img/wink.png",
+        "stars": 0
+    },
+    {
+        "name": "Barnacle",
+        "shortname": "barnacle",
+        "type": "desktop",
+        "description": "A music server for serving your music collection over the local network.",
+        "links": [
+            {
+                "link": "https://github.com/fenimore/",
+                "type": "source",
+                "text": "Source Code",
+                "icon": "fa fa-github fa-fw"
+            }
+        ],
+        "tools": {
+            "language": ["Go", "Javascript"],
+            "database": null,
+            "framework": null,
+            "technologies": ["Bootstrap 4", "HTML5", "Templating"]
+        },
+        "licenses": ["MIT"],
+        "image": "img/barnacle.png",
+        "stars": 0
+    },
+    {
+        "name": "Scribouillage",
+        "shortname": "scribouillage",
+        "type": "desktop",
+        "description": "Transcription software for use with the Infinity Foot Pedal on Linux.",
+        "links": [
+            {
+                "link": "https://github.com/fenimore/scribouillage",
+                "type": "source",
+                "text": "Source Code",
+                "icon": "fa fa-github fa-fw"
+            }
+        ],
+        "tools": {
+            "language": ["Go"],
+            "database": null,
+            "framework": "libui",
+            "technologies": ["libvlc"]
+        },
+        "licenses": ["GPLv3"],
+        "image": "img/scribouillage.png",
+        "stars": 0
+    },
+    {
+        "name": "SingSong and TriggerHappy",
+        "shortname": "SingSong",
+        "type": "library",
+        "description": "Using these two C++ libraries, one can turn an Arduino -- along with an HC-SR04 (four pin Ultrasonic sensor) and piezo -- into a shabby theremin.",
+        "links": [
+            {
+                "link": "https://github.com/fenimore/SingSong",
+                "type": "source",
+                "text": "Buzzer Source",
+                "icon": "fa fa-github fa-fw"
+            },
+            {
+                "link": "https://github.com/fenimore/TriggerHappy",
+                "type": "source",
+                "text": "Sensor Source",
+                "icon": "fa fa-github fa-fw"
+            }
+        ],
+        "tools": {
+            "language": ["C++"],
+            "database": null,
+            "framework": "Arduino",
+            "technologies": []
+        },
+        "licenses": ["Public Domain"],
+        "image": "img/theremin.png",
+        "stars": 0
+    },
+    {
+        "name": "N-Body Physics Simulation",
+        "shortname": "physics-sim",
+        "type": "expirement",
+        "description": "An implementation of Newton's laws of motion, and a simulation of the solar system.",
+        "links": [
+            {
+                "link": "https://github.com/fenimore/physics-sim",
+                "type": "source",
+                "text": "Source Code",
+                "icon": "fa fa-github fa-fw"
+            }
+        ],
+        "tools": {
+            "language": ["Rust"],
+            "database": null,
+            "framework": "Physics",
+            "technologies": []
+        },
+        "licenses": ["MIT"],
+        "image": "img/physics.gif",
+        "stars": 0
+    },
+    {
+        "name": "Conway's Game of Life",
+        "shortname": "conways-scheme",
+        "type": "expirement",
+        "description": "An implemenation of Conway's Game of Life, a cellular automaton.",
+        "links": [
+            {
+                "link": "https://github.com/fenimore/conways-scheme",
+                "type": "source",
+                "text": "Source Code",
+                "icon": "fa fa-github fa-fw"
+            }
+        ],
+        "tools": {
+            "language": ["Racket", "Scheme"],
+            "database": null,
+            "framework": null,
+            "technologies": []
+        },
+        "licenses": ["MIT"],
+        "image": "img/conway.gif",
+        "stars": 0
+    },
+    {
+        "name": "Fissure",
+        "shortname": "fissure-android",
+        "type": "android",
+        "description": "An Android Utility for creating and viewing GIF files. Translated into Japanese and French.",
+        "links": [
+            {
+                "link": "https://github.com/fenimore/fissure-android",
+                "type": "source",
+                "text": "Source Code",
+                "icon": "fa fa-github fa-fw"
+            },
+            {
+                "link": "https://play.google.com/store/apps/details?id=com.workingagenda.fissure",
+                "type": "store",
+                "text": "Play Store",
+                "icon": "fa fa-play fa-fw"
+            },
+            {
+
+                "link": "https://f-droid.org/repository/browse/?fdfilter=devinettes&fdid=com.workingagenda.fissure",
+                "type": "store",
+                "text": "F-Droid",
+                "icon": "fa fa-download fa-fw"
+            }
+        ],
+        "tools": {
+            "language": ["Java"],
+            "database": null,
+            "framework": "Android",
+            "technologies": []
+        },
+        "licenses": ["GPLv3"],
+        "image": "img/fissure.png",
+        "stars": 0
+    },
+    {
+        "name": "KEI Online",
+        "shortname": "keionline",
+        "type": "android",
+        "description": "The official application for the <a target='_blank' href='http://www.keionline.org'>Knowledge Ecology International</a> blog, twitter, and youtube feed.",
+        "links": [
+            {
+                "link": "https://github.com/fenimore/keionline",
+                "type": "source",
+                "text": "Source Code",
+                "icon": "fa fa-github fa-fw"
+            }
+        ],
+        "tools": {
+            "language": ["Java"],
+            "database": null,
+            "framework": "Android",
+            "technologies": ["Twitter API", "Youtube API"]
+        },
+        "licenses": ["GPLv3"],
+        "image": "img/keiicon.png",
+        "stars": 0
+    }
+]
