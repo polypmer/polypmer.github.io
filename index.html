@@ -11,602 +11,411 @@
     <title>Fenimore Love Portfolio</title>
 
     <!-- Bootstrap core CSS -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
 
-    <!-- Custom styles for this template -->
-    <link href="album.css" rel="stylesheet">
-        <!-- Custom Fonts -->
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+
+    <!-- Custom Fonts -->
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <link href="http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <style>
-     body {
-   background:#F8F8FF;
+
+     footer {
+         margin-left: 20px;
+         margin-bottom:50px;
      }
+     body {
+         background:#F8F8FF;
+         font-family: 'Roboto', sans-serif;
+     }
+     .label-purple,
+     .badge-purple { background-color: #9585bf!important }
      p {
-   line-height: 1.5;
-   }
-     h2, th {
-   color: #2E473B;
+         line-height: 1.5;
      }
      a:hover {
-   text-decoration:none;
-   }
-     img:hover {
-   -moz-transform: scale(2.5);
-   -ms-transform: scale(2.5);
-   -o-transform: scale(2.5);
-   -webkit-transform: scale(2.5);
-   transform: scale(2.5);
+         text-decoration:none;
      }
-     ul {
+     .label-stars {
+         float: right;
+     }
+     .label {
+         padding: 5px;
+         margin-right: 5px;
+     }
 
-   }
+     .card-wrap {
+         display: flex;
+         flex-wrap: wrap;
+         flex-direction: row;
+     }
+     .card {
+         box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+         padding: 0;
+         width: 23em;
+         margin-top: 10px;
+         box-sizing: border-box;
+         border-radius: 2px;
+         background-clip: padding-box;
+         margin: 20px;
+         display: flex;
+         flex-direction: column;
+         @media (min-width: $screen-md) {
+             width: 48%;
+             min-width: 0;
+         }
+         @media (min-width: $screen-lg){
+             width: 30%;
+             min-width: 0;
+         }
+         @media (min-width: $screen-xl){
+             width: 25%;
+             min-width: 0;
+         }
+         @media (min-width: $screen-xxl){
+             width: 20%;
+             min-width: 0;
+         }
+     }
+     .container {
+         max-width: 90%;
+     }
+     #about-me {
+         margin-left: 20px;
+         margin-top: 20px;
+         max-width: 70%;
+     }
+     .card span.card-title {
+         color: #fff;
+         font-size: 24px;
+         font-weight: 300;
+         text-transform: uppercase;
+     }
+     .card .card-image {
+         position: relative;
+         overflow: hidden;
+     }
+     .card .card-image img {
+         border-radius: 2px 2px 0 0;
+         background-clip: padding-box;
+         position: relative;
+         z-index: -1;
+     }
+     img {
+         display: block;
+         margin-left: auto;
+         margin-right: auto;
+         max-width: 100%;
+         max-height: 260px;
+         height:auto;width:auto;
+     }
+     .card .card-image span.card-title {
+         position: absolute;
+         bottom: 0;
+         left: 0;
+         padding: 16px;
+     }
+     .card .card-content {
+         padding: 16px;
+         border-radius: 0 0 2px 2px;
+         background-clip: padding-box;
+         box-sizing: border-box;
+     }
+     .card .card-content p {
+         margin: 0;
+         color: inherit;
+     }
+     .card .card-content span.card-title {
+         line-height: 48px;
+     }
+     .card .card-action {
+         border-top: 1px solid rgba(160, 160, 160, 0.2);
+         padding: 16px;
+     }
+     .card .card-action a {
+         color: #ffab40;
+         margin-right: 16px;
+         transition: color 0.3s ease;
+         text-transform: uppercase;
+     }
+     .card .card-action a:hover {
+         color: #ffd8a6;
+         text-decoration: none;
+     }
+
+     .nav-tabs { border-bottom: 2px solid #DDD; }
+     .nav-tabs > li.active > a, .nav-tabs > li.active > a:focus, .nav-tabs > li.active > a:hover { border-width: 0; }
+     .nav-tabs > li > a { border: none; color: #666; }
+     .nav-tabs > li.active > a, .nav-tabs > li > a:hover { border: none; color: #4285F4 !important; background: transparent; }
+     .nav-tabs > li > a::after { content: ""; background: #4285F4; height: 2px; position: absolute; width: 100%; left: 0px; bottom: -1px; transition: all 250ms ease 0s; transform: scale(0); }
+     .nav-tabs > li.active > a::after, .nav-tabs > li:hover > a::after { transform: scale(1); }
+     .tab-nav > li > a::after { background: #21527d none repeat scroll 0% 0%; color: #fff; }
+     .tab-pane { padding: 15px 0; }
+     .tab-content{padding:20px}
+
+     .nav-link { font-variant: small-caps; }
+     .btn-circle {
+         width: 30px;
+         height: 30px;
+         text-align: center;
+         padding: 6px 0;
+         font-size: 14px;
+         line-height: 1.428571429;
+         border-radius: 15px;
+         margin-right: 15px;
+     }
+     .btn-circle.btn-lg {
+         width: 50px;
+         height: 50px;
+         padding: 10px 16px;
+         font-size: 30px;
+         line-height: 1.33;
+         border-radius: 25px;
+     }
     </style>
-
   </head>
-
   <body>
+
+    <div id="app">
       <div class="container">
-    <h2 style="font-family:monospace">[@fenimore ~ ]$</h2>
-    <hr>
-    <div class="row">
-        <div class="col-sm-6">
-      <ul class="list-group">
-          <li class="list-group-item disabled" >On this page:</li>
-          <li class="list-group-item">
-        <a href="#android">Android</a> |
-        <a href="#web">Web</a> |
-        <a href="#desktop">Desktop</a> |
-        <a href="#libs">Libraries</a> |
-        <a href="#ext">Experiments</a> |
-        <a href="#skills">Skills</a>
+        <ul class="nav nav-tabs" style="margin-left:20px;margin-right: 30px;">
+          <li class="nav-item">
+            <a class="nav-link" href="#" v-on:click="aboutMe = true" data-toggle="tab">
+              About Me
+            </a>
           </li>
-      </ul>
-        </div>
-        <div class="col-sm-6">
-      <ul class="list-group">
-          <li class="list-group-item disabled" >Elsewhere:</li>
-          <li class="list-group-item">
-        <a href="https://github.com/fenimore?tab=repositories"> Github Repositories</a> |
-        <a href="https://play.google.com/store/apps/developer?id=Fenimore+Love" >
-            Android Developer Profile</a> |
-        <a href="https://timenotclocks.com">Home Page</a></li>
-      </ul>
-        </div>
-    </div>
-    <hr>
-    <h3>Software</h3>
-      <table class="table table-hover">
-    <thead>
-        <tr>
-      <th colspan="12">
-          Android Applications<a id="android"></a>
-      </th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-      <th>Democracy Droid!</th>
-      <td>
-          <img src="img/ddicon.png" style="width:76px;"  class="img-thumbnail card-img-top" alt="dd">
-      </td>
-      <td>An unofficial
-          <a target="_blank" href="https://democracynow.org">Democracy Now!</a>
-          application for streaming and downloading their podcasts, with thousands of active users around the world.<br>
-                      <a href="https://play.google.com/store/apps/details?id=com.workingagenda.democracydroid"
-                         class="btn btn-default btn-lg"><i class="fa fa-play fa-fw"></i> <span class="network-name">Play Store</span></a>
-                      <a href="https://f-droid.org/repository/browse/?fdfilter=devinettes&fdid=com.workingagenda.democracydroid"
-                         class="btn btn-default btn-lg"><i class="fa fa-download fa-fw"></i> <span class="network-name">F-Droid</span></a>
-                      <a href="https://github.com/fenimore/DemocracyDroid" class="btn btn-default btn-lg">
-        <i class="fa fa-github fa-fw"></i> <span class="network-name">Source Code</span></a>
-                </p>
-      </td>
-      <td> <br>
-          <span class="label label-pill label-primary">Java</span>
-          <br>
-          <span class="label label-pill label-info">GPLv3</span>
-          <span class="label label-pill label-success">CC BY-NC-ND 3.0 US</span>
-      </td>
-        </tr>
-        <tr>
-      <th>Fissure</th>
-      <td>
-          <img src="img/fissure.png" style="width:76px;"  class="img-thumbnail card-img-top" alt="dd">
-      </td>
-      <td><p>An Android Utility for creating and viewing GIF files. Translated in Japanese and French.<br>
-          <a href="https://play.google.com/store/apps/details?id=com.workingagenda.fissure"
-       class="btn btn-default btn-lg"><i class="fa fa-play fa-fw"></i> <span class="network-name">Play Store</span></a>
-          <a href="https://f-droid.org/repository/browse/?fdfilter=devinettes&fdid=com.workingagenda.fissure"
-       class="btn btn-default btn-lg"><i class="fa fa-download fa-fw"></i> <span class="network-name">F-Droid</span></a>
-                      <a href="https://github.com/fenimore/fissure-android"
-       class="btn btn-default btn-lg"><i class="fa fa-github fa-fw"></i> <span class="network-name">Source Code</span></p>
-      </td>
-      <td>              <br>
-          <span class="label label-pill label-primary">Java</span>
-                      <span class="label label-pill label-warning">Compression</span>
-          <br>
-          <span class="label label-pill label-info">GPLv3</span>
-      </td>
-        </tr>
-        <tr>
-      <th>KEI Online</th>
-      <td><img src="img/keiicon.png" style="width:76px;" class="img-thumbnail card-img-top" alt="Card image cap"></td>
-      <td>
-          <p>The official application for the
-        <a target="_blank" href="http://www.keionline.org">Knowledge Ecology International</a>
-        blog, twitter, and youtube feed.<br>
-        <a href="https://play.google.com/store/apps/details?id=org.keionline.keionline"
-           class="btn btn-default btn-lg"><i class="fa fa-play fa-fw"></i> <span class="network-name">Play Store</span></a>
-        <a href="https://github.com/fenimore/keionline" class="btn btn-default btn-lg">
-            <i class="fa fa-github fa-fw"></i> <span class="network-name">Source Code</span></a>
-          </p>
-      </td>
-      <td>              <br>
-                      <span class="label label-pill label-primary">Java</span>
-                      <span class="label label-pill label-warning">Twitter API</span>
-                      <br>
-                      <span class="label label-pill label-info">GPLv3</span>
-      </td>
-        </tr>
-        <tr>
-      <th>Devinettes</th>
-      <td>
-          <img src="img/devinettes_icon.png" style="width:76px;" class="img-circle img-thumbnail card-img-top" alt="Card image cap">
-      </td>
-      <td>
-          <p>This application is a collection riddles in verse;
-        As our team solves and composes
-        new riddles, more will be added. The difficulty will largely depend on
-        the user's subtle aptitude for 'these kinds of things.' Beware, there
-        are no hints, nor keys under the mat.<br>
-        <a href="https://play.google.com/store/apps/details?id=com.workingagenda.another.devinettes"
-           class="btn btn-default btn-lg"><i class="fa fa-play fa-fw"></i> <span class="network-name">Play Store</span></a>
-        <a href="https://f-droid.org/repository/browse/?fdfilter=devinettes&fdid=com.workingagenda.devinettes"
-           class="btn btn-default btn-lg"><i class="fa fa-download fa-fw"></i> <span class="network-name">F-Droid</span></a>
-        <a href="https://github.com/fenimore/devinettes-android" class="btn btn-default btn-lg">
-            <i class="fa fa-github fa-fw"></i> <span class="network-name">Source Code</span></a>
-          </p>
-      </td>
-      <td>
-          <br>
-          <span class="label label-pill label-primary">Java</span>
-                      <span class="label label-pill label-warning">Encryption</span>
-          <br>
-          <span class="label label-pill label-info">GPLv3</span>
-          <span class="label label-pill label-success">CC BY-ND-NC 3.0 US</span>
-      </td>
-        </tr>
-    </tbody>
-    <thead>
-        <tr>
-      <th colspan="12">
-          Web Applications<a id="web"></a>
-      </th>
-        </tr>
-    </thead>
-    <tobody>
-        <tr>
-      <th>
-          The Treasure Map
-      </th>
-      <td>
-          <img src="img/treasuremap.png"  style="width:400px;" class="img-thumbnail card-img-top" alt="Card image cap">
-      </td>
-      <td>
-          <p >This application compares craigslist free stuff postings by location.
-        The distance of a free thing is directly related to its value. There are many treasures to be found,
-        hopefully, you will find something near you worth giving a new home. </p>
-          <a href="https://github.com/fenimore/treasure-map" class="btn btn-default btn-lg">
-        <i class="fa fa-github fa-fw"></i> <span class="network-name">Source Code</span></a>
-      </td>
-      <td>
-          <br>
-          <span class="label label-pill label-primary">Python 3</span>
-          <span class="label label-pill label-danger">Flask</span>
-          <span class="label label-pill label-warning">Open Street Map</span>
-          <br>
-          <span class="label label-pill label-info">MIT</span>
-      </td>
-        </tr>
-        <tr>
-      <th>
-          Chesscargot
-      </th>
-      <td>
-          <img src="img/chesscargot.png" style="width:400px" class="img-thumbnail card-img-top" alt="Card image cap">
-      </td>
-      <td>
-          <p >Chesscargot is a chess server designed to play slow games.
-        Challenge me to a match.<br>
-        <a href="https://github.com/fenimore/chesscargot" class="btn btn-default btn-lg">
-            <i class="fa fa-github fa-fw"></i> <span class="network-name">Source Code</span></a>
-          </p>
-      </td>
-      <td>
-          <br>
-          <span class="label label-pill label-primary">PHP</span> <span class="label label-pill label-default">MySQL</span>
-          <br>
-          <span class="label label-pill label-info">GPLv2</span>
-      </td>
-        </tr>
-        <tr>
-      <th>
-          Wink
-      </th>
-      <td>
-          <img src="img/wink.png"  class="img-thumbnail card-img-top" style="width:400px" alt="Card image cap">
-      </td>
-      <td>
-          <p >A simple flat file photo gallery.
-        This was built with a minimal functionality and design in mind.</p>
-          <a href="https://github.com/fenimore/wink" class="btn btn-default btn-lg">
-        <i class="fa fa-github fa-fw"></i> <span class="network-name">Source Code</span></a>
-      </td>
-      <td>
-          <br>
-          <span class="label label-pill label-primary">PHP</span>
-          <span class="label label-pill label-warning">Authentication</span>
-          <br>
-          <span class="label label-pill label-info">GPLv3</span>
-          <span class="label label-pill label-success">CC BY-NC 3.0 US</span>
-      </td>
-        </tr>
-        <tr>
-      <th>
-          Muse
-      </th>
-      <td>
-          <img src="img/realmess.png" style="width:400px;" class="img-thumbnail card-img-top"  alt="Card image cap">
-      </td>
-      <td>
-          <p >A django-powered network, early stages of development.
-        Oblige your productivity. Agree to certain conditions of creative production,
-        under a contract either alone or with others. </p>
-      </td>
-      <td>
-          <span class="label label-pill label-primary">Python 3</span>
-          <span class="label label-pill label-danger">Django</span>
-          <span class="label label-pill label-default">SQLite</span>
-      </td>
-        </tr>
-    </tbody>
-    <thead>
-        <tr>
-      <th colspan="12">
-          Desktop Applications<a id="desktop"></a>
-      </th>
-        </tr>
-    </thead>
-    <tobody>
-        <tr>
-      <th>Alio</th>
-      <td>
-          <img src="img/alio.png" style="width:100px;" class="img-thumbnail card-img-top"  alt="Card image cap">
-      </td>
-      <td>
-          <p>Commandline Music Player.</p>
-          <a href="https://github.com/fenimore/alio" class="btn btn-default btn-lg">
-        <i class="fa fa-github fa-fw"></i> <span class="network-name">Source Code</span></a>
-      </td>
-      <td>
-          <span class="label label-pill label-primary">Go</span>
-          <span class="label label-pill label-warning">libvlc</span>
-          <span class="label label-pill label-success">TUI</span>
-          <br>
-          <span class="label label-pill label-info">GPLv3</span>
-      </td>
-        </tr>
+          <li class="nav-item">
+            <a class="nav-link" href="#" v-on:click="setFilter('date')" data-toggle="tab">
+              Sort by Date
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#" v-on:click="setFilter('stars')" data-toggle="tab">
+              Sort by Stars
+            </a>
+          </li>
+          <li class="nav-item">
+            <div class="nav-link disabled">Program Type</div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="#" v-on:click="setFilter('any')" data-toggle="tab">Any</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#" v-on:click="setFilter('android')" data-toggle="tab">Android</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#" v-on:click="setFilter('library')" data-toggle="tab">Libraries</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#" v-on:click="setFilter('experiment')" data-toggle="tab">Experiments</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#" v-on:click="setFilter('web')" data-toggle="tab">Web Apps</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#" v-on:click="setFilter('desktop')" data-toggle="tab">Desktop</a>
+          </li>
 
-        <tr>
-      <th>Scribouillage</th>
-      <td>
-          <img src="img/scribouillage.png" style="width:100px;" class="img-thumbnail card-img-top"  alt="Card image cap">
-      </td>
-      <td>
-          <p>Transcription software for use with the Infinity Foot Pedal on Linux.</p>
-          <a href="https://github.com/fenimore/scribouillage" class="btn btn-default btn-lg">
-        <i class="fa fa-github fa-fw"></i> <span class="network-name">Source Code</span></a>
-      </td>
-      <td>
-          <span class="label label-pill label-primary">Go</span>
-          <span class="label label-pill label-warning">libvlc</span>
-          <span class="label label-pill label-success">libui</span>
-          <br>
-          <span class="label label-pill label-info">GPLv3</span>
-      </td>
-        </tr>
-        <tr>
-      <th>Barnacle</th>
-      <td>
-          <img src="img/barnacle.png" style="width:100px;" class="img-thumbnail card-img-top"  alt="Card image cap">
-      </td>
-      <td>
-          <p>A music server for serving your music collection over the local network.</p>
-          <a href="https://github.com/fenimore/barnacle" class="btn btn-default btn-lg">
-        <i class="fa fa-github fa-fw"></i> <span class="network-name">Source Code</span></a>
-      </td>
-      <td>
-          <span class="label label-pill label-primary">Go</span>
-          <span class="label label-pill label-primary">Javascript</span>
-          <span class="label label-pill label-success">templates</span>
-          <span class="label label-pill label-warning">HTML5</span>
-          <span class="label label-pill label-warning">Bootstrap 4</span>
-          <br>
-          <span class="label label-pill label-info">MIT</span>
-      </td>
-        </tr>
-    </tbody>
-    <thead>
-        <tr>
-      <th colspan="12">
-          Libraries<a id="libs"></a>
-      </th>
-        </tr>
-    </thead>
-    <tobody>
-        <tr>
-      <th>Go Chess | Ghess</th>
-      <td>
-          <img src="img/ghess.png" style="width:100px;" class="img-thumbnail card-img-top"  alt="Card image cap">
-      </td>
-      <td>
-          <p>A Go chess engine. Ghess represents the board, parses moves, and includes a Minimax implementation with alpha beta pruning for an AI.</p>
-          <a href="https://github.com/fenimore/go-chess" class="btn btn-default btn-lg">
-        <i class="fa fa-github fa-fw"></i> <span class="network-name">Source Code</span></a>
-          <a href="https://godoc.org/github.com/fenimore/go-chess" class="btn btn-default btn-lg">
-        <i class="fa fa-book fa-fw"></i> <span class="network-name">Go Doc</span></a>
-          <a href="https://ghess-chess.herokuapp.com/" class="btn btn-default btn-lg">
-        <i class="fa fa-crosshairs fa-fw"></i> <span class="network-name">Challenge AI</span></a>
-      </td>
-      <td>
-          <span class="label label-pill label-primary">Go</span>
-          <span class="label label-pill label-warning">Websockets</span>
-          <span class="label label-pill label-danger">MiniMax</span>
-          <br>
-          <span class="label label-pill label-info">GPLv3</span>
-      </td>
-        </tr>
-        <tr>
-      <th>
-          freestuffs
-      </th>
-      <td>
-          <img src="img/treasure.png" style="width:100px;" class="img-thumbnail card-img-top"  alt="Card image cap">
-      </td>
-      <td>
-          <p>This is a Python 3.x package which scrapes free stuff from Craigslist.</p>
-          <p>As an example, there's a twitter bot (adopted from a Pump.io bot of similar functioning) which
-        posts free items from Craiglist New York onto Twitter. <a href="https://twitter.com/FreeeBot">Follow</a> @freeestuff.
-          </p>
-          <a href="https://pypi.python.org/pypi/freestuffs/0.1" class="btn btn-default btn-lg">
-        <i class="fa fa-download fa-fw"></i> <span class="network-name">Pip</span></a>
-          <a href="https://twitter.com/FreeeBot" class="btn btn-default btn-lg">
-        <i class="fa fa-twitter fa-fw"></i> <span class="network-name">Follow</span></a>
-          <a href="https://github.com/fenimore/freeebot" class="btn btn-default btn-lg">
-        <i class="fa fa-github fa-fw"></i> <span class="network-name">Source Code</span></a>
-          <a href="http://freestuffs.readthedocs.io/en/latest/" class="btn btn-default btn-lg">
-        <i class="fa fa-book fa-fw"></i> <span class="network-name">Read the Docs</span></a>
-      </td>
-      <td>
-          <br>
-          <span class="label label-pill label-primary">Python 3</span>
-          <span class="label label-pill label-warning">Read the docs</span>
-          <span class="label label-pill label-warning">Twitter API</span>
-          <br>
-          <span class="label label-pill label-info">MIT</span>
-      </td>
-        </tr>
-        <tr>
-      <th>
-          SingSong and TriggerHappy
-      </th>
-      <td>
-          <img src="img/theremin.png" style="width:100px;" class="img-thumbnail card-img-top" alt="Card image cap">
-      </td>
-      <td>
-          <p >Using these two C++ libraries, one can turn an
-        Arduino -- along with an HC-SR04 (four pin Ultrasonic sensor)
-        and piezo -- into a shabby theremin.</p>
-          <a href="https://github.com/fenimore/SingSong" class="btn btn-default btn-lg">
-        <i class="fa fa-volume-up fa-fw"></i> <span class="network-name">Buzzer Source</span></a>
-          <a href="https://github.com/fenimore/TriggerHappy" class="btn btn-default btn-lg">
-        <i class="fa fa-deaf fa-fw"></i> <span class="network-name">Sensor Source</span></a>
-      </td>
-      <td>
-          <span class="label label-pill label-primary">C++</span>
-          <span class="label label-pill label-purple">Arduino</span>
-          <br>
-          <span class="label label-pill label-info">Public Domain</span>
-      </td>
-        </tr>
 
-    </tbody>
-    <thead>
-        <tr>
-      <th colspan="12">
-          Experiments<a id="ext"></a>
-      </th>
-        </tr>
-    </thead>
-    <tobody>
-        <tr>
-      <th>Fenestrate</th>
-      <td>
-          <img src="img/fenestrate.png" style="width:100px;" class="img-thumbnail card-img-top"  alt="Card image cap">
-      </td>
-      <td>
-          <p>A Firefox & Chrome WebExtension for displaying the source code of a website as your mouse overs
-          over it.</p>
-          <a href="https://github.com/fenimore/fenestrate" class="btn btn-default btn-lg">
-        <i class="fa fa-github fa-fw"></i> <span class="network-name">Source Code</span></a>
-        <a href="https://chrome.google.com/webstore/detail/fenestrate/bpaccmfpmigikfeedodhkegmjahmpmok" class="btn btn-default btn-lg">
-        <i class="fa fa-chrome fa-fw"></i> <span class="network-name">Chrome</span></a>
-      </td>
-      <td>
-          <span class="label label-pill label-primary">Javascript</span>
-          <span class="label label-pill label-success">WebExtensions</span>
-          <span class="label label-pill label-warning">Chrome API</span>
-          <br>
-          <span class="label label-pill label-info">GPLv3</span>
-      </td>
-        </tr>
-        <tr>
-
-            <tr>
-                <th>Intercept</th>
-                <td>
-                    <img src="img/intercept.png" style="width:100px;" class="img-thumbnail card-img-top"  alt="Card image cap">
-                </td>
-                <td>
-                    <p>A Firefox & Chrome WebExtension for intercepting http requests from your browser; sort by MIME type.</p>
-                    <a href="https://github.com/fenimore/intercept" class="btn btn-default btn-lg">
-                        <i class="fa fa-github fa-fw"></i> <span class="network-name">Source Code</span></a>
-                </td>
-                <td>
-                    <span class="label label-pill label-primary">Javascript</span>
-                    <span class="label label-pill label-success">WebExtensions</span>
-                    <span class="label label-pill label-warning">Chrome API</span>
-                    <br>
-                    <span class="label label-pill label-info">GPLv3</span>
-                </td>
-            </tr>
-
-          <tr>
-            <th>Conway's Game of Life</th>
-            <td>
-                <img src="img/conway.gif" style="width:100px;" class="img-thumbnail card-img-top"  alt="Card image cap">
-            </td>
-            <td>
-                <p>An implementation of Conway's Game of Life, a Cellular Automaton.</p>
-                <a href="https://github.com/fenimore/conways-scheme" class="btn btn-default btn-lg">
-                    <i class="fa fa-github fa-fw"></i> <span class="network-name">Source Code</span></a>
-            </td>
-            <td>
-                <span class="label label-pill label-primary">Racket</span>
-                <span class="label label-pill label-success">GUI</span>
-                <br>
-                <span class="label label-pill label-info">MIT</span>
-            </td>
-
-          </tr>
-          <tr>
-            <th>N-Body Physics Simulation</th>
-            <td>
-                <img src="img/physics.gif" style="width:100px;" class="img-thumbnail card-img-top"  alt="Card image cap">
-            </td>
-            <td>
-                <p>An implementation Newtons laws of motion and a simulation of the solar system.</p>
-                <a href="https://github.com/fenimore/physics-sim" class="btn btn-default btn-lg">
-                    <i class="fa fa-github fa-fw"></i> <span class="network-name">Source Code</span></a>
-            </td>
-            <td>
-                <span class="label label-pill label-primary">Rust</span>
-                <span class="label label-pill label-success">Physics</span>
-                <br>
-                <span class="label label-pill label-info">MIT</span>
-            </td>
-
-        </tr>
-
-    </tbody>
-      </table>
-      <hr>
-      <h3>Technology</h3>
-      <a id="skills"></a>
-      <table class="table table-hover">
-    <tbody>
-        <tr>
-      <th>
-          Languages
-      </th>
-      <td>
-          <i>Go, Python, Java, PHP, Bash, Ruby, C++, Rust</i>
-      </td>
-        </tr>
-        <tr>
-      <th>
-          Distributed Systems
-      </th>
-      <td>
-          <i>Hadoop, SparkSQL, Kafka, AWS</i>
-      </td>
-        </tr>
-
-        <tr>
-      <th>
-          Frameworks
-      </th>
-      <td>
-          <i>Django, Flask, Bootstrap, libgdx, Arduino, Linux</i>
-      </td>
-        </tr>
-        <tr>
-      <th>
-          API
-      </th>
-      <td>
-          <i>Twitter, OpenStreetMap, GovTrack, Github, Youtube, Chrome</i>
-      </td>
-        </tr>
-        <tr>
-      <th>
-          Databases
-      </th>
-      <td>
-          <i>MySQL, SQLite, PostgreSQL, BoltDB</i>
-      </td>
-        </tr>
-        <tr>
-      <th>
-          Tools
-      </th>
-      <td>
-          <i>Git, Command line, Docker, Web scraping, Websockets, Encryption, RSS, Readthedocs, Nginx, Let's Encrypt</i>
-      </td>
-        </tr>
-        <tr>
-      <th>
-          IDE
-      </th>
-      <td>
-          <i>Emacs, Android Studio, PyCharm</i>
-      </td>
-        </tr>
-        <tr>
-      <th>
-          Other
-      </th>
-      <td>
-          <i>Critical Theory, Research, Communication, Language, Editing, Sicilian Defense</i><br>
-          <i>English, French, Latin</i>
-      </td>
-        </tr>
-    </tbody>
-      </table>
+        </ul>
       </div>
 
-    <footer class="text-muted">
+      <div class="container" v-if="aboutMe" >
+
+        <div id="about-me">
+          <h1><pre>[@fenimore ~ ]$ whoami</pre></h1>
+          <p>My name is <b>Fenimore Love</b> and I am a software developer and data engineer at <a href="https://magnetic.com">Magnetic</a> in New York City, previously a participant at <a href="https://recurse.om">The Recurse Center</a> . This website showcases some small and large personal projects I've worked on over the years. It has become an eclectic mix of applications, libraries, and experiments. You can find most everything, and other work, on Github <a href="https://github.com/fenimore">@fenimore</a>.</p>
+          <p>You can reach me by the usual channels, and my corner of the internet is <a href="https://timenotclocks.com">timenotclocks.com</a>.</p>
+
+          <p>This website is written with Vue.js</p>
+          <hr>
+          <h2>Skills</h2>
+          <table class="table table-hover">
+            <tbody>
+              <tr>
+                <th>Languages</th>
+                <td><i>Go, Python, Java, PHP, Bash, Ruby, C++, Rust</i></td>
+              </tr>
+              <tr>
+                <th>Distributed Systems</th>
+                <td><i>Hadoop, SparkSQL, Kafka, AWS, Luigi</i></td>
+              </tr>
+              <tr>
+                <th>Frameworks</th>
+                <td><i>Django, Flask, D3, Android, Bootstrap, libgdx, Arduino</i></td>
+              </tr>
+              <tr>
+                <th>Databases</th>
+                <td><i>MySQL, SQLite, PostgresSQL, BoltDB, Redis</i></td>
+              </tr>
+              <tr>
+                <th>Tools</th>
+                <td><i>Git, Unix, Docker, Nginx, Let's Encrypt, Datadog</i></td>
+              </tr>
+              <tr>
+                <th>API</th>
+                <td><i>Twitter, OpenStreetMap, GovTrack, Github, Youtube, Chrome</i></td>
+              </tr>
+              <tr>
+                <th>IDE</th>
+                <td><i>Emacs, Android Studio, PyCharm</i></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="container" v-if="!aboutMe" >
+        <h1 style="margin-left:20px;margin-top:20px;">Projects Portfolio</h1>
+        <div class="card-wrap">
+          <div class="card" v-for="project in projects" v-if="project.name !== ''"
+               :key="project.shortname">
+
+            <a v-bind:href="'https://github.com/fenimore/'+project.shortname">
+              <img class="card-image card-img-top img-responsive"
+                   v-bind:src=project.image alt="Card image cap">
+            </a>
+            <div class="card-block">
+              <h4 class="card-title">{{ project.name }}</h4>
+              <p class="card-text"><span v-html="project.description"></span></p>
+            </div>
+            <ul class="list-group list-group-flush"> <!-- Tools -->
+              <li class="list-group-item">
+                <span class="label label-pill label-primary" v-for="lang in project.tools.language">
+                  {{ lang }}
+                </span>
+                <span class="label label-pill label-purple" v-if="project.tools.database">
+                  {{ project.tools.database }}
+                </span>
+                <span class="label label-pill label-danger" v-if="project.tools.framework">
+                  {{ project.tools.framework }}
+                </span>
+                <span class="label label-pill label-warning label-stars" v-if="project.stars > 1">
+                  <i class="fa fa-star fa-fw"></i> {{ project.stars }}
+                </span>
+              </li>
+              <li class="list-group-item">
+                <span v-for="tool in project.tools.technologies"
+                      class="label label-pill label-default">{{ tool }}
+                </span>
+                <span  v-for="license in project.licenses"
+                       class="label label-pill label-info label-license">
+                  {{ license }}
+                </span>
+              </li>
+            </ul>
+            <div class="card-block" style="margin-bottom:15px"> <!-- Links -->
+              <span v-for="link in project.links" v-bind:title="link.text" >
+                <a class="btn btn-default btn-circle btn-lg" v-bind:href="link.link">
+                  <i v-if="link.icon" v-bind:class="link.icon"></i>
+                </a>
+              </span>
+            </div>
+            <div class="card-block" style="position:absolute;bottom:-15px;"> <!-- Links -->
+              <i><small>Last Pushed: {{ project.pushed }}</small></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer class="footer">
       <div class="container">
-        <p class="pull-xs-right">
-          <a href="#">Back to top</a>
-        </p>
-        <p>Fenimore Love | 2016</p>
+        <div class="rc-scout"></div>
+        <script async defer src="https://www.recurse-scout.com/loader.js?t=a61484401d2f2e7cd5515704a2f9001b"></script>
       </div>
     </footer>
+  <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+  <script type="text/javascript">
 
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/holder/2.9.3/holder.js"></script>
-    <script>
-      $(function () {
-        Holder.addTheme("thumb", { background: "#55595c", foreground: "#eceeef", text: "Thumbnail" });
-      });
-    </script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/js/bootstrap.min.js" integrity="sha384-vZ2WRJMwsjRMW/8U7i6PWi6AlO1L79snBrmgiDpgIWJ82z8eA5lenwvxbMV1PAh7" crossorigin="anonymous"></script>
-    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
-  </body>
+
+   var vm = new Vue({
+       el: '#app',
+       data: {
+           projects: null,
+           stars: null,
+           repos: null,
+           filter: "all",
+           aboutMe: false
+       },
+       created: function () {
+           fetch("https://api.github.com/users/fenimore/repos?per_page=100")
+               .then(r => r.json())
+               .then(json_stars => {
+                   let stars = {};
+                   for (var i = 0; i < json_stars.length; i++) {
+                       stargazers = json_stars[i].stargazers_count;
+                       lastupdate = json_stars[i].pushed_at;
+                       if (isNaN(stargazers)){
+                           stars[json_stars[i].name] = [0, lastupdate];
+                       } else {
+                           stars[json_stars[i].name] = [stargazers, lastupdate];
+                       }
+                   }
+                   this.stars = stars;
+                   fetch("portfolio.json")
+                       .then(r => r.json())
+                       .then(json => {
+                           for (var i = 0; i < json.length; i++) {
+                               json[i].stars = parseInt(stars[json[i].shortname][0], 10);
+                               json[i].pushed = new Date(stars[json[i].shortname][1]).toDateString();
+                           }
+                           this.projects = json.sort(function(a, b) {
+                               return b.stars - a.stars;
+                           })
+
+                           this.repos = this.projects;
+                       });
+               });
+       },
+       methods: {
+           setFilter: function(f) {
+               this.aboutMe = false;
+               var target = "";
+               switch (f) {
+                   case "date":
+                       this.projects = this.repos.sort(function(a, b) {
+                           return Date.parse(b.pushed) - Date.parse(a.pushed);
+                       })
+                       return;
+                   case "any":
+                       this.projects = this.repos;
+                       return;
+                   case "stars":
+                       this.projects = this.repos.sort(function(a, b) {
+                           return b.stars - a.stars;
+                       })
+                       return;
+                   case "android":
+                       target = "android";
+                       break;
+                   case "library":
+                       target = "library";
+                       break;
+                   case "desktop":
+                       target = "desktop";
+                       break;
+                   case "web":
+                       target = "web";
+                       break;
+                   case "experiment":
+                       target = "experiment";
+                       break;
+                   default:
+                       console.log("noth");
+               }
+               this.projects = [];
+               for (var i = 0; i < this.repos.length; i++) {
+                   if (this.repos[i].type === target) {
+                       this.projects.push(this.repos[i]);
+                   }
+               }
+           }
+       }
+   });
+
+
+  </script>
+</body>
 </html>

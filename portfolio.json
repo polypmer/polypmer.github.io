@@ -34,7 +34,7 @@
                 "HLS-streaming"
             ]
         },
-        "licenses": ["GPLv3", "CC BY-NC-ND 3.0 US"],
+        "licenses": ["GPLv3", "CC BY-NC-ND"],
         "image": "img/ddicon.png",
         "stars": 0
     },
@@ -42,8 +42,14 @@
         "name": "Alio",
         "shortname": "alio",
         "type": "desktop",
-        "description": "Commandline Music Player",
+        "description": "Commandline Music Player with familiar <b>emacs style</b> keybindings. Get the latest release at github below.",
         "links": [
+            {
+                "link": "https://github.com/fenimore/alio/releases/latest",
+                "type": "download",
+                "text": "Latest Release",
+                "icon": "fa fa-download fa-fw"
+            },
             {
                 "link": "https://github.com/fenimore/alio",
                 "type": "source",
@@ -68,7 +74,7 @@
         "name": "Ghess",
         "shortname": "ghess",
         "type": "library",
-        "description": "A Go chess engine. Ghess represents the board, parses moves, and includes a Minimax implementation with alpha beta pruning for an AI.",
+        "description": "A Go chess engine. Ghess represents the board, parses moves, and includes a Minimax implementation with alpha beta pruning for an AI. Ghess features a <i>fast</i> and <i>effective</i> AI.",
         "links": [
             {
                 "link": "https://github.com/fenimore/go-chess",
@@ -128,7 +134,7 @@
             "framework": "Android",
             "technologies": []
         },
-        "licenses": ["GPLv3", "CC BY-NC-ND 3.0 US"],
+        "licenses": ["GPLv3", "CC BY-NC-ND"],
         "image": "img/devinettes_icon.png",
         "stars": 0
     },
@@ -148,7 +154,7 @@
                 "link": "https://github.com/fenimore/freestuffs",
                 "type": "source",
                 "text": "Freeestuffs Source",
-                "icon": "fa fa-github fa-fw"
+                "icon": "fa fa-github-square fa-fw"
             },
             {
                 "link": "https://twitter.com/FreeeBot",
@@ -200,7 +206,7 @@
         "name": "Wink",
         "shortname": "wink",
         "type": "web",
-        "description": "A simple flat file photo gallery. <br><br> this was build with minimal functionality and design in mind :)",
+        "description": "A simple flat file photo gallery. Wink handles thumbnail generation and admin dashboards, but you can also just upload files via FPS.<br><br> Wink was built with minimal functionality and design in mind :)",
         "links": [
             {
                 "link": "https://github.com/fenimore/wink",
@@ -223,7 +229,7 @@
         "name": "Barnacle",
         "shortname": "barnacle",
         "type": "desktop",
-        "description": "A music server for serving your music collection over the local network.",
+        "description": "A music server for serving your music collection over the local network. The music player is pure HTML5 and the backend is written in Go.",
         "links": [
             {
                 "link": "https://github.com/fenimore/",
@@ -246,7 +252,7 @@
         "name": "Scribouillage",
         "shortname": "scribouillage",
         "type": "desktop",
-        "description": "Transcription software for use with the Infinity Foot Pedal on Linux.",
+        "description": "Transcription software for use with the Infinity Foot Pedal on Linux. The footpedal is used to controll playback with your feet, and proper foot pedal drivers are rare on Linux :(",
         "links": [
             {
                 "link": "https://github.com/fenimore/scribouillage",
@@ -266,6 +272,35 @@
         "stars": 0
     },
     {
+        "name": "beetee",
+        "shortname": "beetee",
+        "type": "experiment",
+        "description": "A <b>Work in Progress</b> BitTorrent Client implemented in Go. I have a blog post outlining the protocol in dialog format <a href='http://timenotclocks.com/blog/post/d1alog/'>here</a>. This client implements multi-file torrents and UDP trackers. Beetee can handle up to 80 concurrent connections with peers.",
+        "links": [
+            {
+                "link": "https://github.com/fenimore/beetee",
+                "type": "source",
+                "text": "Source Code",
+                "icon": "fa fa-github fa-fw"
+            },
+            {
+                "link": "https://timenotclocks.com/blog/post/d1alog/",
+                "type": "description",
+                "text": "Blog Post",
+                "icon": "fa fa-rss fa-fw"
+            }
+        ],
+        "tools": {
+            "language": ["Go"],
+            "database": null,
+            "framework": null,
+            "technologies": ["BitTorrent"]
+        },
+        "licenses": ["GPLv3"],
+        "image": "img/beetee.png",
+        "stars": 0
+    },
+    {
         "name": "SingSong and TriggerHappy",
         "shortname": "SingSong",
         "type": "library",
@@ -281,7 +316,7 @@
                 "link": "https://github.com/fenimore/TriggerHappy",
                 "type": "source",
                 "text": "Sensor Source",
-                "icon": "fa fa-github fa-fw"
+                "icon": "fa fa-github-square fa-fw"
             }
         ],
         "tools": {
@@ -297,7 +332,7 @@
     {
         "name": "N-Body Physics Simulation",
         "shortname": "physics-sim",
-        "type": "expirement",
+        "type": "experiment",
         "description": "An implementation of Newton's laws of motion, and a simulation of the solar system.",
         "links": [
             {
@@ -310,7 +345,7 @@
         "tools": {
             "language": ["Rust"],
             "database": null,
-            "framework": "Physics",
+            "framework": "",
             "technologies": []
         },
         "licenses": ["MIT"],
@@ -318,10 +353,64 @@
         "stars": 0
     },
     {
+        "name": "Fenestrate",
+        "shortname": "fenestrate",
+        "type": "experiment",
+        "description": "A Firefox & Chrome WebExtension for displaying the source code of a website as your mouse hovers over it.",
+        "links": [
+            {
+
+                "link": "https://github.com/fenimore/fenestrate",
+                "type": "source",
+                "text": "Source Code",
+                "icon": "fa fa-github fa-fw"
+            },
+            {
+                "link": "https://chrome.google.com/webstore/detail/fenestrate/bpaccmfpmigikfeedodhkegmjahmpmok",
+                "type": "store",
+                "text": "Chrome Extensions",
+                "icon": "fa fa-download fa-fw"
+            }
+        ],
+        "tools": {
+            "language": ["Javascript"],
+            "database": null,
+            "framework": "WebExtensions",
+            "technologies": ["Chrome API"]
+        },
+        "licenses": ["GPLv3"],
+        "image": "img/fenestrate.png",
+        "stars": 0
+    },
+    {
+        "name": "Intercept",
+        "shortname": "intercept",
+        "type": "experiment",
+        "description": "A Firefox & Chrome WebExtension for intercepting http requests from your browser; sort by MIME type.",
+        "links": [
+            {
+
+                "link": "https://github.com/fenimore/intercept",
+                "type": "source",
+                "text": "Source Code",
+                "icon": "fa fa-github fa-fw"
+            }
+        ],
+        "tools": {
+            "language": ["Javascript"],
+            "database": null,
+            "framework": "WebExtensions",
+            "technologies": ["Chrome API"]
+        },
+        "licenses": ["GPLv3"],
+        "image": "img/intercept.png",
+        "stars": 0
+    },
+    {
         "name": "Conway's Game of Life",
         "shortname": "conways-scheme",
-        "type": "expirement",
-        "description": "An implemenation of Conway's Game of Life, a cellular automaton.",
+        "type": "experiment",
+        "description": "An implemenation of Conway's Game of Life, a cellular automaton in Scheme.",
         "links": [
             {
                 "link": "https://github.com/fenimore/conways-scheme",
@@ -344,7 +433,7 @@
         "name": "Fissure",
         "shortname": "fissure-android",
         "type": "android",
-        "description": "An Android Utility for creating and viewing GIF files. Translated into Japanese and French.",
+        "description": "An Android Utility for creating and viewing GIF files. Fissure has been translated into Japanese and French.",
         "links": [
             {
                 "link": "https://github.com/fenimore/fissure-android",
