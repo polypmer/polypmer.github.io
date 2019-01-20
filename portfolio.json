@@ -41,7 +41,7 @@
     {
         "name": "Alio",
         "shortname": "alio",
-        "type": "desktop",
+        "type": "commandline",
         "description": "Commandline Music Player with familiar <b>emacs style</b> keybindings. Get the latest release at github below.",
         "links": [
             {
@@ -274,7 +274,7 @@
     {
         "name": "beetee",
         "shortname": "beetee",
-        "type": "experiment",
+        "type": "commandline",
         "description": "A <b>Work in Progress</b> BitTorrent Client implemented in Go. I have a blog post outlining the protocol in dialog format <a href='http://timenotclocks.com/blog/post/d1alog/'>here</a>. This client implements multi-file torrents and UDP trackers. Beetee can handle up to 80 concurrent connections with peers.",
         "links": [
             {
@@ -327,6 +327,35 @@
         },
         "licenses": ["Public Domain"],
         "image": "img/theremin.png",
+        "stars": 0
+    },
+    {
+        "name": "msplit",
+        "shortname": "msplit",
+        "type": "commandline",
+        "description": "Split mp3 file into n second chunks command line utility.",
+        "links": [
+            {
+                "link": "https://github.com/fenimore/msplit",
+                "type": "source",
+                "text": "Source Code",
+                "icon": "fa fa-github fa-fw"
+            },
+            {
+                "link": "https://github.com/fenimore/msplit/releases/latest",
+                "type": "download",
+                "text": "Latest Release",
+                "icon": "fa fa-download fa-fw"
+            }
+        ],
+        "tools": {
+            "language": ["Rust"],
+            "database": null,
+            "framework": "",
+            "technologies": []
+        },
+        "licenses": ["MIT"],
+        "image": "img/msplit.png",
         "stars": 0
     },
     {

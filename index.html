@@ -213,7 +213,10 @@
             <a class="nav-link" href="#" v-on:click="setFilter('experiment')" data-toggle="tab">Experiments</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#" v-on:click="setFilter('web')" data-toggle="tab">Web Apps</a>
+            <a class="nav-link" href="#" v-on:click="setFilter('web')" data-toggle="tab">Webapps</a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link" href="#" v-on:click="setFilter('commandline')" data-toggle="tab">Commandline</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#" v-on:click="setFilter('desktop')" data-toggle="tab">Desktop</a>
@@ -392,6 +395,9 @@
                        break;
                    case "library":
                        target = "library";
+                       break;
+                   case "commandline":
+                       target = "commandline";
                        break;
                    case "desktop":
                        target = "desktop";
