@@ -11,11 +11,11 @@
     <title>Fenimore Love Portfolio</title>
 
     <!-- Bootstrap core CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
-    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
     <!-- Custom Fonts -->
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css">
@@ -39,10 +39,11 @@
      a:hover {
          text-decoration:none;
      }
-     .label-stars {
+     .badge-stars {
          float: right;
+         color: white;
      }
-     .label {
+     .badge {
          padding: 5px;
          margin-right: 5px;
      }
@@ -93,24 +94,6 @@
          font-size: 24px;
          font-weight: 300;
          text-transform: uppercase;
-     }
-     .card .card-image {
-         position: relative;
-         overflow: hidden;
-     }
-     .card .card-image img {
-         border-radius: 2px 2px 0 0;
-         background-clip: padding-box;
-         position: relative;
-         z-index: -1;
-     }
-     img {
-         display: block;
-         margin-left: auto;
-         margin-right: auto;
-         max-width: 100%;
-         max-height: 260px;
-         height:auto;width:auto;
      }
      .card .card-image span.card-title {
          position: absolute;
@@ -175,253 +158,266 @@
          line-height: 1.33;
          border-radius: 25px;
      }
+     .card-img-top {
+         min-width: auto;
+         max-width: auto;
+     }
     </style>
   </head>
   <body>
 
-    <div id="app">
-      <div class="container">
-        <ul class="nav nav-tabs" style="margin-left:20px;margin-right: 30px;">
-          <li class="nav-item">
-            <a class="nav-link" href="#" v-on:click="aboutMe = true" data-toggle="tab">
-              About Me
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#" v-on:click="setFilter('date')" data-toggle="tab">
-              Sort by Date
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#" v-on:click="setFilter('stars')" data-toggle="tab">
-              Sort by Stars
-            </a>
-          </li>
-          <li class="nav-item">
-            <div class="nav-link disabled">Program Type</div>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link active" href="#" v-on:click="setFilter('any')" data-toggle="tab">Any</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#" v-on:click="setFilter('android')" data-toggle="tab">Android</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#" v-on:click="setFilter('library')" data-toggle="tab">Libraries</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#" v-on:click="setFilter('experiment')" data-toggle="tab">Experiments</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#" v-on:click="setFilter('web')" data-toggle="tab">Webapps</a>
-          </li>
-          <li class="nav-item">
-              <a class="nav-link" href="#" v-on:click="setFilter('commandline')" data-toggle="tab">Commandline</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#" v-on:click="setFilter('desktop')" data-toggle="tab">Desktop</a>
-          </li>
+      <div id="app">
+          <div class="container">
+              <ul class="nav nav-tabs" style="margin-left:20px;margin-right: 30px;">
+                  <li class="nav-item">
+                      <a class="nav-link" href="#" v-on:click="aboutMe = true" data-toggle="tab">
+                          About Me
+                      </a>
+                  </li>
+                  <li class="nav-item">
+                      <div class="nav-link disabled"> | </div>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="#" v-on:click="setFilter('date')" data-toggle="tab">
+                          Sort by Date
+                      </a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="#" v-on:click="setFilter('stars')" data-toggle="tab">
+                          Sort by Stars
+                      </a>
+                  </li>
+                  <li class="nav-item">
+                      <div class="nav-link disabled"> | </div>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link active" href="#" v-on:click="setFilter('any')" data-toggle="tab">Any</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="#" v-on:click="setFilter('android')" data-toggle="tab">Android</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="#" v-on:click="setFilter('library')" data-toggle="tab">Libraries</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="#" v-on:click="setFilter('experiment')" data-toggle="tab">Experiments</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="#" v-on:click="setFilter('web')" data-toggle="tab">Webapps</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="#" v-on:click="setFilter('commandline')" data-toggle="tab">Commandline</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="#" v-on:click="setFilter('desktop')" data-toggle="tab">Desktop</a>
+                  </li>
+                  <li class="nav-item">
+                      <div class="dropdown"  data-toggle="tab">
+                          <button class="btn btn-info dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                              Language
+                          </button>
+                          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                              <a class="dropdown-item"  v-on:click="setFilter('language', 'Python')"  href="#">Python</a>
+                              <a class="dropdown-item"  v-on:click="setFilter('language', 'Rust')"  href="#">Rust</a>
+                              <a class="dropdown-item"  v-on:click="setFilter('language', 'Go')"  href="#">Go</a>
+                              <a class="dropdown-item"  v-on:click="setFilter('language', 'PHP')"  href="#">PHP</a>
+                              <a class="dropdown-item"  v-on:click="setFilter('language', 'Javascript')"  href="#">Javascript</a>
+                              <a class="dropdown-item"  v-on:click="setFilter('language', 'Scheme')"  href="#">Scheme</a>
+                              <a class="dropdown-item"  v-on:click="setFilter('language', 'C++')"  href="#">C++</a>
+                              <a class="dropdown-item"  v-on:click="setFilter('language', 'Java')"  href="#">Java</a>
+                          </div>
+                      </div>
+                  </li>
 
 
-        </ul>
-      </div>
 
-      <div class="container" v-if="aboutMe" >
-
-        <div id="about-me">
-          <h1><pre>[@fenimore ~ ]$ whoami</pre></h1>
-          <p>My name is <b>Fenimore Love</b> and I am a software developer and data engineer at <a href="https://dashlane.com">Dashlane</a> in New York City and a <a href="https://recurse.om">Recurser</a> . This website showcases some small and large personal projects I've worked on over the years. It is a mix of applications, libraries, and experiments. You can find everything, and other work, on Github <a href="https://github.com/fenimore">@fenimore</a>.</p>
-          <p>You can reach me by the usual channels, and my corner of the internet is <a href="https://timenotclocks.com">timenotclocks.com</a>.</p>
-
-          <p>This website is written with Vue.js</p>
-          <hr>
-          <h2>Some of my favorite software</h2>
-          <table class="table table-hover">
-            <tbody>
-              <tr>
-                <th>Languages</th>
-                <td><i>Python, Go, Rust, Bash, Scala, HTML/Javascript</i></td>
-              </tr>
-              <tr>
-                <th>Distributed Systems</th>
-                <td><i>Spark, Kafka, Luigi, Airflow</i></td>
-              </tr>
-              <tr>
-                <th>Frameworks</th>
-                <td><i>Flask, Android, Arduino, Vue.js, Bootstrap</i></td>
-              </tr>
-              <tr>
-                <th>Databases</th>
-                <td><i>Postgres, SQLite, Parquet, TSV, Redis</i></td>
-              </tr>
-              <tr>
-                <th>Tools</th>
-                <td><i>Unix, Git, Docker, Nginx, statsd</i></td>
-              </tr>
-              <tr>
-                <th>Editors</th>
-                <td><i>Emacs</i></td>
-              </tr>
-              <tr>
-                  <th>Linux Distributions</th>
-                  <td><i>Arch, Ubuntu, Centos</i></td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
-      <div class="container" v-if="!aboutMe" >
-        <h1 style="margin-left:20px;margin-top:20px;">Projects Portfolio</h1>
-        <div class="card-wrap">
-          <div class="card" v-for="project in projects" v-if="project.name !== ''"
-               :key="project.shortname">
-
-            <a v-bind:href="'https://github.com/fenimore/'+project.shortname">
-              <img class="card-image card-img-top img-responsive"
-                   v-bind:src=project.image alt="Card image cap">
-            </a>
-            <div class="card-block">
-              <h4 class="card-title">{{ project.name }}</h4>
-              <p class="card-text"><span v-html="project.description"></span></p>
-            </div>
-            <ul class="list-group list-group-flush"> <!-- Tools -->
-              <li class="list-group-item">
-                <span class="label label-pill label-primary" v-for="lang in project.tools.language">
-                  {{ lang }}
-                </span>
-                <span class="label label-pill label-purple" v-if="project.tools.database">
-                  {{ project.tools.database }}
-                </span>
-                <span class="label label-pill label-danger" v-if="project.tools.framework">
-                  {{ project.tools.framework }}
-                </span>
-                <span class="label label-pill label-warning label-stars" v-if="project.stars > 1">
-                  <i class="fa fa-star fa-fw"></i> {{ project.stars }}
-                </span>
-              </li>
-              <li class="list-group-item">
-                <span v-for="tool in project.tools.technologies"
-                      class="label label-pill label-default">{{ tool }}
-                </span>
-                <span  v-for="license in project.licenses"
-                       class="label label-pill label-info label-license">
-                  {{ license }}
-                </span>
-              </li>
-            </ul>
-            <div class="card-block" style="margin-bottom:15px"> <!-- Links -->
-              <span v-for="link in project.links" v-bind:title="link.text" >
-                <a class="btn btn-default btn-circle btn-lg" v-bind:href="link.link">
-                  <i v-if="link.icon" v-bind:class="link.icon"></i>
-                </a>
-              </span>
-            </div>
-            <div class="card-block" style="position:absolute;bottom:-15px;"> <!-- Links -->
-              <i><small>Last Pushed: {{ project.pushed }}</small></i>
-            </div>
+              </ul>
           </div>
-        </div>
+
+          <div class="container" v-if="aboutMe" >
+
+              <div id="about-me">
+                  <h1><pre>[@fenimore ~ ]$ whoami</pre></h1>
+                  <p>My name is <b>Fenimore Love</b> and I am a software developer and data engineer at <a href="https://dashlane.com">Dashlane</a> in New York City and a <a href="https://recurse.om">Recurser</a> . This website showcases some small and large personal projects I've worked on over the years. It is a mix of applications, libraries, and experiments. You can find everything, and other work, on Github <a href="https://github.com/fenimore">@fenimore</a>.</p>
+                  <p>You can reach me by the usual channels, and my corner of the internet is <a href="https://timenotclocks.com">timenotclocks.com</a>.</p>
+
+                  <p>This website is written with Vue.js</p>
+                  <hr>
+                  <h2>Some of my favorite software</h2>
+                  <table class="table table-hover">
+                      <tbody>
+                          <tr>
+                              <th>Languages</th>
+                              <td><i>Python, Go, Rust, Bash, Scala, HTML/Javascript</i></td>
+                          </tr>
+                          <tr>
+                              <th>Distributed Systems</th>
+                              <td><i>Spark, Kafka, Luigi, Airflow</i></td>
+                          </tr>
+                          <tr>
+                              <th>Frameworks</th>
+                              <td><i>Flask, Android, Arduino, Vue.js, Bootstrap</i></td>
+                          </tr>
+                          <tr>
+                              <th>Databases</th>
+                              <td><i>Postgres, SQLite, Parquet, TSV, Redis</i></td>
+                          </tr>
+                          <tr>
+                              <th>Tools</th>
+                              <td><i>Unix, Git, Docker, Nginx, statsd</i></td>
+                          </tr>
+                          <tr>
+                              <th>Editors</th>
+                              <td><i>Emacs</i></td>
+                          </tr>
+                          <tr>
+                              <th>Linux Distributions</th>
+                              <td><i>Arch, Ubuntu, Centos</i></td>
+                          </tr>
+                      </tbody>
+                  </table>
+              </div>
+          </div>
+          <div class="container" v-if="!aboutMe" >
+              <h1 style="margin-left:20px;margin-top:20px;">Projects Portfolio</h1>
+              <div class="card-wrap">
+                  <div class="card" v-for="project in projects" v-if="project.name !== ''"
+                       :key="project.shortname">
+
+                      <a v-bind:href="'https://github.com/fenimore/'+project.shortname">
+                          <img class="card-img-top img-thumbnail img-fluid" v-bind:src=project.image alt="Card image cap">
+                      </a>
+                      <div class="card-body">
+                          <h4 class="card-title">{{ project.name }}</h4>
+                          <p class="card-text"><span v-html="project.description"></span></p>
+                      </div>
+                      <ul class="list-group list-group-flush"> <!-- Tools -->
+                          <li class="list-group-item">
+                              <span class="badge badge-pill badge-primary" v-for="lang in project.tools.language">
+                                  {{ lang }}
+                              </span>
+                              <span class="badge badge-pill badge-purple" v-if="project.tools.database">
+                                  {{ project.tools.database }}
+                              </span>
+                              <span class="badge badge-pill badge-danger" v-if="project.tools.framework">
+                                  {{ project.tools.framework }}
+                              </span>
+                              <span class="badge badge-pill badge-warning badge-stars" v-if="project.stars > 1">
+                                  <i class="fa fa-star fa-fw"></i> {{ project.stars }}
+                              </span>
+                          </li>
+                          <li class="list-group-item">
+                              <span v-for="tool in project.tools.technologies"
+                                    class="badge badge-pill badge-secondary">{{ tool }}
+                              </span>
+                              <span  v-for="license in project.licenses"
+                                     class="badge badge-pill badge-info label-license">
+                                  {{ license }}
+                              </span>
+                          </li>
+                      </ul>
+                      <div class="card-body" style="margin-bottom:15px"> <!-- Links -->
+                          <span v-for="link in project.links" v-bind:title="link.text" >
+                              <a class="btn btn-circle btn-lg" v-bind:href="link.link">
+                                  <i v-if="link.icon" v-bind:class="link.icon"></i>
+                              </a>
+                          </span>
+                      </div>
+                      <div class="card-body" style="position:absolute;bottom:-15px;"> <!-- Links -->
+                          <i><small>Last Pushed: {{ project.pushed }}</small></i>
+                      </div>
+                  </div>
+              </div>
+          </div>
       </div>
-    </div>
-    <footer class="footer">
-      <div class="container">
-        <div class="rc-scout"></div>
-        <script async defer src="https://www.recurse-scout.com/loader.js?t=a61484401d2f2e7cd5515704a2f9001b"></script>
-      </div>
-    </footer>
-  <script src="https://cdn.jsdelivr.net/npm/vue"></script>
-  <script type="text/javascript">
+      <footer class="footer">
+          <div class="container">
+              <div class="rc-scout"></div>
+              <script async defer src="https://www.recurse-scout.com/loader.js?t=a61484401d2f2e7cd5515704a2f9001b"></script>
+          </div>
+      </footer>
+      <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+      <script type="text/javascript">
 
 
-   var vm = new Vue({
-       el: '#app',
-       data: {
-           projects: null,
-           stars: null,
-           repos: null,
-           filter: "all",
-           aboutMe: false
-       },
-       created: function () {
-           fetch("https://api.github.com/users/fenimore/repos?per_page=100")
-               .then(r => r.json())
-               .then(json_stars => {
-                   let stars = {};
-                   for (var i = 0; i < json_stars.length; i++) {
-                       stargazers = json_stars[i].stargazers_count;
-                       lastupdate = json_stars[i].pushed_at;
-                       if (isNaN(stargazers)){
-                           stars[json_stars[i].name] = [0, lastupdate];
-                       } else {
-                           stars[json_stars[i].name] = [stargazers, lastupdate];
-                       }
-                   }
-                   this.stars = stars;
-                   fetch("portfolio.json")
-                       .then(r => r.json())
-                       .then(json => {
-                           for (var i = 0; i < json.length; i++) {
-                               json[i].stars = parseInt(stars[json[i].shortname][0], 10);
-                               json[i].pushed = new Date(stars[json[i].shortname][1]).toDateString();
+       var vm = new Vue({
+           el: '#app',
+           data: {
+               projects: null,
+               stars: null,
+               repos: null,
+               filter: "all",
+               aboutMe: false
+           },
+           created: function () {
+               fetch("https://api.github.com/users/fenimore/repos?per_page=100")
+                   .then(r => r.json())
+                   .then(json_stars => {
+                       let stars = {};
+                       for (var i = 0; i < json_stars.length; i++) {
+                           stargazers = json_stars[i].stargazers_count;
+                           lastupdate = json_stars[i].pushed_at;
+                           if (isNaN(stargazers)){
+                               stars[json_stars[i].name] = [0, lastupdate];
+                           } else {
+                               stars[json_stars[i].name] = [stargazers, lastupdate];
                            }
-                           this.projects = json.sort(function(a, b) {
+                       }
+                       this.stars = stars;
+                       fetch("portfolio.json")
+                           .then(r => r.json())
+                           .then(json => {
+                               for (var i = 0; i < json.length; i++) {
+                                   json[i].stars = parseInt(stars[json[i].shortname][0], 10);
+                                   json[i].pushed = new Date(stars[json[i].shortname][1]).toDateString();
+                               }
+                               this.projects = json.sort(function(a, b) {
+                                   return b.stars - a.stars;
+                               })
+
+                               this.repos = this.projects;
+                           });
+                   });
+           },
+           methods: {
+               setFilter: function(t, lang = "") {
+                   this.aboutMe = false;
+                   var target = "";
+                   switch (t) {
+                       case "date":
+                           this.projects = this.repos.sort(function(a, b) {
+                               return Date.parse(b.pushed) - Date.parse(a.pushed);
+                           })
+                           return;
+                       case "any":
+                           this.projects = this.repos;
+                           return;
+                       case "stars":
+                           this.projects = this.repos.sort(function(a, b) {
                                return b.stars - a.stars;
                            })
+                           return;
+                       default:
+                           console.log("Filtering for " + t);
+                   }
 
-                           this.repos = this.projects;
-                       });
-               });
-       },
-       methods: {
-           setFilter: function(f) {
-               this.aboutMe = false;
-               var target = "";
-               switch (f) {
-                   case "date":
-                       this.projects = this.repos.sort(function(a, b) {
-                           return Date.parse(b.pushed) - Date.parse(a.pushed);
-                       })
-                       return;
-                   case "any":
-                       this.projects = this.repos;
-                       return;
-                   case "stars":
-                       this.projects = this.repos.sort(function(a, b) {
-                           return b.stars - a.stars;
-                       })
-                       return;
-                   case "android":
-                       target = "android";
-                       break;
-                   case "library":
-                       target = "library";
-                       break;
-                   case "commandline":
-                       target = "commandline";
-                       break;
-                   case "desktop":
-                       target = "desktop";
-                       break;
-                   case "web":
-                       target = "web";
-                       break;
-                   case "experiment":
-                       target = "experiment";
-                       break;
-                   default:
-                       console.log("noth");
-               }
-               this.projects = [];
-               for (var i = 0; i < this.repos.length; i++) {
-                   if (this.repos[i].type === target) {
-                       this.projects.push(this.repos[i]);
+                   this.projects = [];
+                   for (var i = 0; i < this.repos.length; i++) {
+                       console.log(t);
+                       console.log(lang);
+                       console.log(this.repos[i].tools.language);
+                       console.log(this.repos[i].tools.language.includes(lang));
+                       if ( (t === 'language') && (this.repos[i].tools.language.includes(lang)) ) {
+                           this.projects.push(this.repos[i]);
+                       } else  if ( this.repos[i].type === t ) {
+                           this.projects.push(this.repos[i]);
+                       }
                    }
                }
            }
-       }
-   });
+       });
 
 
-  </script>
-</body>
+      </script>
+  </body>
 </html>
