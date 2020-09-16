@@ -1,5 +1,31 @@
 [
     {
+        "name": "edifice",
+        "shortname": "edifice",
+        "type": "commandline",
+        "description": "The ansible role for my personal website.",
+        "links": [
+            {
+                "link": "https://github.com/fenimore/edifice",
+                "type": "source",
+                "text": "Source Code",
+                "icon": "fa fa-github fa-fw"
+            }
+        ],
+        "tools": {
+            "language": ["Python"],
+            "database": null,
+            "framework": "Ansible",
+            "technologies": [
+                "Automation",
+                "Infrastructure as code"
+            ]
+        },
+        "licenses": [],
+        "image": "img/edifice.png",
+        "stars": 0
+    },
+    {
         "name": "Democracy Droid!",
         "shortname": "DemocracyDroid",
         "type": "android",
@@ -516,5 +542,5 @@
         "licenses": ["GPLv3"],
         "image": "img/keiicon.png",
         "stars": 0
-    }
+    },
 ]
